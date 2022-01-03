@@ -146,7 +146,21 @@ backtest_en = model_en.historical_forecasts(series=series_en_transformed,
                                             retrain=False,
                                             verbose=True)
 
-
+plt.figure(figsize=(7,5),edgecolor="black")
+ax = plt.axes()
+scaler_en.inverse_transform(series_en_transformed)[2695:3190].plot(label='actual')
+scaler_en.inverse_transform(backtest_en)[0:60].plot(
+    label='backtest (horizon=5)', 
+    low_quantile=0.01, 
+    high_quantile=0.99)
+plt.legend();
+plt.xlabel('Time (minutes)')
+plt.ylabel('Voltage (V)')
+plt.yticks(np.arange(-0.5,4))
+ax.spines['top'].set_visible(True)
+ax.spines['right'].set_visible(True)
+ax.spines['bottom'].set_visible(True)
+ax.spines['left'].set_visible(True)
 # In[3]:
 
 
