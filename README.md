@@ -12,6 +12,8 @@
 6. The different datasets available in the datasets folder. 
 
 ## Acknowledgement
-We appreciate the following github repos a lot for their valuable code base
+We appreciate the following github repos a lot for their valuable code base and datasets:
 
 https://github.com/unit8co/darts
+
+Calce Battery Research Group. [Online]. Available: https://web. calce.umd.edu/batteries/data.htm
